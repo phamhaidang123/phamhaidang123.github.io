@@ -1,0 +1,22 @@
+h1{
+    color: yellowgreen;
+}
+h2{
+    color: #e74c3c;
+}
+.hoc{
+    color: #34a4eb;
+}
+.xem{
+    color: #2ecc71;
+}
+.doc{
+    color: #9b59b6;
+}
+body{
+    text-align: center;
+    /* background-image: url("https://oceanfdn.org/wp-content/uploads/2010/08/SargassoSea.jpg"); *
+}
+img{;
+    border-radius: 1%;
+}
