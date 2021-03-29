@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confetti</title>
+    
+</head>
+<body>
+    <button onclick="start()">    Start</button>
+    <button onclick="stop()">    Stop</button>
+    <button onclick="pause()">    Pause</button>
+    <button onclick="resume()">    Resume</button>
+    <script src="./confetti.js"></script>
+    <script>
+        let start = ()=>{
+            confetti.start();
+        }
+        let stop = ()=>{
+            confetti.stop();
+        }
+        let pause = ()=>{
+            confetti.pause();
+        }
+        let resume = ()=>{
+            confetti.resume();
+        }
+    </script>
+</body>
+</html>
