@@ -1,0 +1,214 @@
+.carousel-item img{
+    height: 600px;
+    object-fit: cover;
+}
+.row{
+    justify-content: space-around;
+}
+.card{
+    margin-bottom: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+.card img{
+    height: 90%;
+    width: 90%;
+}
+.ctexts h3{
+    margin-top: 30px;
+    text-align: center;
+}
+.footer{
+    width: 100%;
+    height: 300px;
+    background-color: #3cc2f5;
+    /* padding: 0px  50px ; */
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+}
+.f-top{
+    width: 100%;
+    height: 250px;
+    background-color: #2ecc71;
+}
+/* .f-mid{
+    background-color: #e67e22; */
+/* } */
+/* .f-top h1 {
+    color: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+} */
+.container h1{
+    margin-bottom: 20px;
+}
+.container h2{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+/* .f-top{
+  display: flex;
+  justify-content: space-around; */
+
+
+.f-bottom{
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    height: 50px;
+}
+.f-top{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+.f-left, .f-mid,.f-right{
+    width: 30%;
+}
+
+.social-media{
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-media a{
+    text-align: center;
+}
+.f-right h1{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.f-mid img{
+    display: flex;
+    justify-content: space-around;
+}
+.f-left, .f-mid, .f-right{
+    /* margin-right: 30px; */
+    padding-right: 30px;
+}
+.title h1{
+    font-family: Tahoma;
+}
+.products-list{
+    justify-content: space-around;
+    background-color: coral;
+    padding: 20px;
+}
+.card button {
+    background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+    border: none;
+    width: 100%;
+    padding: 5px 0px;
+    color: white;
+    cursor: pointer;
+    background-size: 150%;
+    transition: 1s;
+    margin-top: 50px;
+
+}
+.coupon-line1{
+  justify-content: space-between;
+}
+.text-white img{
+    margin-top: 5px;
+}
+/* --coupon-- */
+.coupon{
+    display:flex;
+    width: 450px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+}
+.coupon *{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+.coupon .left{
+    display: flex;
+    flex-direction:column;
+    justify-content:space-between;
+    width: 65%;
+    padding: 8px;
+}
+.coupon .left .top h2{
+    margin-bottom: 7px;
+}
+.coupon .left .top :nth-child(3){
+    text-transform: uppercase;
+    margin-top: 5px;
+    font-weight: bold;
+    padding: 5px;
+    background-color:#c0392b;
+    color: #bdc3c7;
+    width: fit-content;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.coupon .left .top :nth-child(3):hover{
+    background-color:#e74c3c;
+    transition: 0.5s;
+}
+.coupon .left .bot{
+    width: 100%;
+}
+.coupon .left .bot .chart{
+    width: 100%;
+    height:7px;
+    background-color:#bdc3c7;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.coupon .left .bot .chart .chart_level{
+    background-color:#2ecc71;
+    border-radius: 5px;
+    height:100%;
+    width: 100%;
+}
+.coupon .mid{
+    height:100%;
+    width: 1%;
+    background-color:#e67e22;
+    margin: 0px 5px;
+}
+.coupon .right{
+    width: 30%;
+    padding: 8px;
+}
+.coupon .right h6{
+    color: #fa983a;
+    margin: 10px 0px;
+}
+.coupon .right button:not(:nth-child(1)){
+    padding:5px;
+    margin:10px 0px;
+    text-align: center;
+    font-weight: 600;
+    border-radius:15px;
+}
+.coupon .right :nth-child(3){
+    color:white;
+    background: linear-gradient(to right, #f9ca24, #e67e22);
+}
+.coupon .right :nth-child(4){
+    color:#e67e22;
+    background: white;
+    border: 1px solid #e67e22;
+}
+.coupon .right button{
+    padding: 10px;
+}
+
+
+

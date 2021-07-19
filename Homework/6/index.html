@@ -7,17 +7,29 @@
     <title>Web bán chó 🐶</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="./packet/sweetalert2.css">
+
     <style>
         .title {
             text-align: center;
         }
     </style>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<h1>Các sản phẩm hot</h1>
 </head>
 
 <body>
-    <div class="nav">
+    <div class="nav1">
         <!-- <ul>
             <li><strong>Đây là ul</strong></li>
             <li>Ăn</li>
@@ -64,7 +76,7 @@
     </video>
     </div>
     <!-- body sp -->
-    <div class="container">
+    <div class="container01">
         <div class="title">
             <h1>Các sản phẩm hot 🔥 </h1>
         </div>
@@ -79,7 +91,7 @@
                 </div>
 
                 <div class="button">
-                    <button>Mua ngay</button>
+                    <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
                 </div>
             </div>
             <!-- Con số 2 -->
@@ -91,7 +103,7 @@
                     <li>Giá bán: 7.900.900 - 12.900.000 vnđ</li>
                 </div>
 
-                <button>Mua ngay</button>
+                <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
             </div>
             <!-- Con số 3 -->
             <div class="cart">
@@ -101,7 +113,7 @@
                     <li>Đây là giống chó có nguồn gốc từ Tây Bắc Siberia.</li>
                     <li>Giá bán: 8.000.000 - 13.000.000 vnđ</li>
                 </div>
-                <button>Mua ngay</button>
+                <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
             </div>
             <!-- Con số 4 -->
             <div class="cart">
@@ -112,7 +124,7 @@
                     <li>Giá bán: 12.900.000 - 24.900.000 vnđ</li>
                 </div>
 
-                <button>Mua ngay</button>
+                <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
             </div>
 
             <!-- body sp hàng 2 -->
@@ -128,7 +140,7 @@
                 </div>
 
                 <div class="button">
-                    <button>Mua ngay</button>
+                    <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
                 </div>
             </div>
             <!-- Con số 2 -->
@@ -140,7 +152,7 @@
                     <li>Giá bán: 8.900.900 - 13.900.000 vnđ</li>
                 </div>
 
-                <button>Mua ngay</button>
+                <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
             </div>
             <!-- Con số 3 -->
             <div class="cart">
@@ -151,7 +163,7 @@
                     <li>Giá bán: 20.000.000 - 35.000.000 vnđ</li>
                 </div>
 
-                <button>Mua ngay</button>
+                <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
             </div>
             <!-- Con số 4 -->
             <div data-aos="zoom-out-left" class="cart">
@@ -161,7 +173,7 @@
                     <li>Đây là giống chó săn mồi cỡ trung có nguồn gốc từ Anh Quốc.</li>
                     <li>Giá bán: 8.900.000 - 13.900.000 vnđ</li>
                 </div>
-                <button>Mua ngay</button>
+                <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
             </div>
 
             <!-- body sp hàng 3 -->
@@ -178,7 +190,7 @@
 
 
                 <div class="button">
-                    <button>Mua ngay</button>
+                    <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
                 </div>
             </div>
             <!-- Con số 2 -->
@@ -190,7 +202,7 @@
                     <li>Giá bán: 7.900.900 - 13.900.000 vnđ</li>
                 </div>
 
-                <button>Mua ngay</button>
+                <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
             </div>
             <!-- Con số 3 -->
             <div class="cart">
@@ -201,7 +213,7 @@
                     <li>Giá bán: 8.900.000 - 13.900.000 vnđ</li>
                 </div>
 
-                <button>Mua ngay</button>
+                <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
             </div>
             <!-- Con số 4 -->
             <div class="cart">
@@ -211,7 +223,7 @@
                     <li>Đây là giống chó được nuôi rộng rãi và phổ biến.</li>
                     <li>Giá bán: 5.900.000 - 10.900.000 vnđ</li>
                 </div>
-                <button>Mua ngay</button>
+                <button data-toggle="modal" data-target="#myModal">Mua ngay</button>
             </div>
 
 
@@ -221,7 +233,49 @@
 
 
     </div>
+    <!-- Trigger the modal with a button -->
+    
 
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="contact" action="">
+                        <div class="form-group">
+                            <label for="pwd">Name:</label>
+                            <input type="text" class="form-control" id="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="pwd">Message:</label>
+                            <input type="text" class="form-control" id="message">
+                          </div>
+                        <div class="form-group">
+                          <label for="email">Email:</label>
+                          <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Phone:</label>
+                            <input type="number" class="form-control" id="phone">
+                          </div>
+            
+            
+                        <button type="submit" class="btn btn-default">Submit</button>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
     <div id="ft" class="footer">
         <div class="f-top">
             <div class="f-left">
@@ -259,8 +313,57 @@
         </div>
     </div>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./packet/sweetalert2.all.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./packet/confetti.js"></script>
     <script>
         AOS.init();
+        function sweetAlert(icon, content) {
+            const Toast = Swal.mixin({
+                toast: true,
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+                onOpen: (toast) => {
+                    toast.addEventListener('mouseenter', Swal.stopTimer)
+                    toast.addEventListener('mouseleave', Swal.resumeTimer)
+                }
+            })
+
+            Toast.fire({
+                icon: icon,
+                title: content
+            })
+        }
+        $('#contact').on('submit', function (e) {
+               e.preventDefault()
+   
+               var name = $("#name");
+               var email = $("#email");
+               var phone = $("#phone");
+               var message = $("#message");
+               $.ajax({
+                   url: './sendEmail.php',
+                   method: 'POST',
+                   dataType: 'json',
+                   data: {
+                       name: name.val(),
+                       email: email.val(),
+                       message: message.val(),
+                       phone: phone.val(),
+                   },
+                   success: function (data) {
+                       sweetAlert(data.status,data.response);
+                       confetti.start()
+            setTimeout(function () {
+                confetti.stop();
+            }, 3000);
+                   }
+               });
+               return false;
+   
+           })
     </script>
 
 </html>
