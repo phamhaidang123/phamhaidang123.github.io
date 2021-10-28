@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-.container {
+.container_ {
   width: 90%;
   height: 100vh;
   margin: 0 auto;
@@ -152,6 +152,7 @@ body.dark {
   height: 94%;
   display: flex;
   flex-direction: column;
+  overflow-y: scroll;
 }
 .right .chat_body form {
   width: 100%;

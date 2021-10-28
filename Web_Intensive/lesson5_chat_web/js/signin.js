@@ -23,7 +23,7 @@ login.onsubmit = (e) => {
           var user = userCredential.user;
           if(user.emailVerified){
               console.log("Hello");
-              open("../html/chat.html", "_self")
+              open("../html/chatt.html", "_self")
           }else{
               
               sweetAlert("error", "Pls verify your e-mail")

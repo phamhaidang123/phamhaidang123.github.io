@@ -10,12 +10,26 @@
       href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
       rel="stylesheet"
     />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   </head>
   <body>
     <div class="nav_bar"></div>
-    <div class="container">
+    <div class="container_">
       <div class="left">
-        <div class="item">
+        <div class="item" data-toggle="modal" data-target="#myModal">
           <lottie-player
             src="https://assets1.lottiefiles.com/packages/lf20_bzhzelwb.json"
             background="transparent"
@@ -51,9 +65,15 @@
 
         <div class="usersList">
           <div
-            style="width: 100%;height: 100%; display:flex; justify-content:center; align-items:center"
+            style="
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            "
           >
-            <img src="./img/Infinity-1s-200px.gif" alt="" />
+          <lottie-player src="https://assets7.lottiefiles.com/datafiles/bEYvzB8QfV3EM9a/data.json"  background="transparent"  speed="1"  style="width: 150px; height: 150px;"  loop  autoplay></lottie-player>
           </div>
         </div>
       </div>
@@ -61,11 +81,7 @@
         <div class="info">
           <div class="name">
             <h3 id="currentName">
-              <img
-                style="width: 50px"
-                src="./img/Infinity-1s-200px.gif"
-                alt=""
-              />
+              <lottie-player src="https://assets7.lottiefiles.com/datafiles/bEYvzB8QfV3EM9a/data.json"  background="transparent"  speed="1"  style="width: 50px; height: 50px;"  loop  autoplay></lottie-player>
             </h3>
             <p id="currentEmail">...</p>
           </div>
@@ -73,7 +89,33 @@
           <h4 id="real_time">...</h4>
         </div>
         <div class="chat_body">
-          <div class="chat_content">...</div>
+          <div class="chat_content">
+            <!-- <div class="message">
+              <div class="message_info">
+                <span style="margin-right: 15px">${data.messages[i].owner}</span>
+                <span>${data.messages[i].time}</span>
+              </div>
+              <span class="content_m">${data.messages[i].content}</span>
+            </div>
+            <div class="message onwer">
+              <div class="message_info">
+                <span style="margin-right: 15px">${data.messages[i].owner}</span>
+                <span>${data.messages[i].time}</span>
+              </div>
+              <span class="content_m">${data.messages[i].content}</span>
+            </div> -->
+            <div
+              style="
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+            >
+            <lottie-player src="https://assets7.lottiefiles.com/datafiles/bEYvzB8QfV3EM9a/data.json"  background="transparent"  speed="1"  style="width: 200px; height: 200px;"  loop  autoplay></lottie-player>
+            </div>
+          </div>
           <form id="sent_message">
             <input name="m" type="text" placeholder="Enter yours message" />
             <button type="submit">
@@ -91,6 +133,62 @@
       </div>
     </div>
 
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Thêm mới cuộc trò chuyện</h4>
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+          </div>
+
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form id="addNewConversation">
+              <div class="form-group">
+                <label for="email">Tên Cuộc Trò Chuyện</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Nhập tên cuộc trò chuyện"
+                  name="name"
+                />
+              </div>
+              <div class="form-group">
+                <label for="pwd">Email của những người bạn</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  placeholder="Nhập email của người bạn"
+                  name="email"
+                />
+              </div>
+              <div class="form-group">
+                <label for="exampleFormControlFile1"
+                  >Ảnh của cuộc trò chuyện</label
+                >
+                <input type="file" class="form-control-file" id="photo" />
+              </div>
+            </form>
+          </div>
+
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success"
+              id="formAddNewConversationBtn"
+            >
+              Thêm
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       const checkbox = document.getElementById("checkbox");
 
@@ -103,21 +201,21 @@
 
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
     <script>
       const firebaseConfig = {
-    apiKey: "AIzaSyADOqk6pCgs5EdvljQtng_D7oUaAMdZjYQ",
-    authDomain: "chatwebbydang.firebaseapp.com",
-    projectId: "chatwebbydang",
-    storageBucket: "chatwebbydang.appspot.com",
-    messagingSenderId: "507439995841",
-    appId: "1:507439995841:web:144fb75dc782e0beee6d40",
-    measurementId: "G-VL7JDZ4CXP"
-  };
-        firebase.initializeApp(firebaseConfig);
-        firebase.analytics();
-        // Initialize Firebase
-        
+        apiKey: "AIzaSyADOqk6pCgs5EdvljQtng_D7oUaAMdZjYQ",
+        authDomain: "chatwebbydang.firebaseapp.com",
+        projectId: "chatwebbydang",
+        storageBucket: "chatwebbydang.appspot.com",
+        messagingSenderId: "507439995841",
+        appId: "1:507439995841:web:144fb75dc782e0beee6d40",
+        measurementId: "G-VL7JDZ4CXP",
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
     </script>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="../js/chatt.js"></script>
