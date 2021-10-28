@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,300&display=swap');
+
+* {
+    /* font-family: 'Roboto', sans-serif; */
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+
+    color: black;
+    margin: 0;
+
+}
+
+li {
+    list-style: none;
+
+}
+
+.main2 h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+}
+
+
+/* nav bar */
+
+.header .info {
+    display: flex;
+    justify-content: space-around;
+    background-color: aliceblue;
+    z-index: 1;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    width: 100%;
+
+    top: 0px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+.nav .info :hover {
+    /* background-color: yellow;
+    opacity:1; */
+    transition: 0.7s;
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+    transform: rotate()
+}
+
+.img {
+    justify-content: space-around;
+    height: 100%;
+    flex-direction: column;
+    display: flex;
+
+}
+
+.header {
+    justify-content: center;
+    display: flex;
+    height: 87vh;
+}
+
+/* Main 1 */
+.main1 {
+
+    padding: 20px;
+    background: linear-gradient(to right, #4CA1AF, #C4E0E5);
+    justify-content: space-around;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    height: 87vh;
+    width: 10%;
+
+
+}
+
+.main1 h1 {
+    padding: 20px;
+}
+.main3 .info{
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom:  1.5px solid;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+    
+}
+.main3 input {
+    width: 95%;
+  padding:7px 10px;
+  outline: none;
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid orange;
+  transition: 0.5s;
+    
+}
+.main3 .chat_body{
+    height: calc(100% - 100px);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+   
+}
+.main3 button{
+    background: transparent;
+    border: none;
+}
+.nav .info {
+    animation: pulse 5s infinite;
+    animation: pulse 3s ease infinite alternate;
+    height: 70px;
+
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #3498db;
+    }
+
+    100% {
+        background-color: #2ecc71;
+    }
+
+    50% {
+        background-color: #e67e22;
+    }
+
+    25% {
+        background-color: #f1c40f;
+    }
+}
+
+/* .img{ */
+/* justify-content: space-between;
+} */
+
+/* .main2 */
+.main2 {
+    /* padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 3px;
+    padding-left: cal(2px+2%); */
+    z-index: 9;
+    width: 30%;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+
+}
+
+.main2 .userlist {
+    /* border: 1px solid rgb(0, 0, 0); */
+    overflow-y: scroll;
+    margin-top: 10px;
+
+
+
+}
+
+.main3 .chat_body .chat_content{
+    width: 100%;
+    height: 94%;
+    
+}
+
+.main3 .chat_body form{
+    width: 100%;
+    height: 6%;
+
+}
+.chat_content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.chat {
+    display: flex;
+}
+
+.date {
+    justify-content: space-between;
+}
+
+.mail {
+
+    justify-content: space-between;
+
+}
+
+hr {
+    width: 100%;
+}
+
+.userlist :hover {
+    transition: 0.9s;
+
+    border: black;
+
+}
+
+.profile {
+
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+.main2 h1 {
+    text-align: center;
+}
+
+.header {
+    display: flex;
+
+    height: auto;
+
+    display: flex;
+    box-sizing: border-box;
+    border-radius: 15px;
+}
+
+.userlist img {
+    width: 50px;
+    height: 50px;
+}
+
+.userlist {
+    height: 90%;
+}
+
+/* main 3 */
+
+
+.main3 .chat input {
+    padding: 5px;
+    height: 28px;
+    width: 699px;
+    border-radius: 50px;
+
+}
+
+.main3 {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    height: 87vh;
+    width: 60%;
+}
+
+
+
+.main3 .chat {
+    display: flex;
+}
+
+.main3 span #name {
+    margin-left: 15px;
+    padding-bottom: 55px;
+    font-size: 25px;
+}
+
+.mail p {
+    font-style: italic;
+}
+
+/* -input- */
+
+.btn {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: none;
+    margin-top: 20px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+}
+
+.btn:hover {
+    transform: translateY(-10px);
+    transition-timing-function: linear;
+    transform: 250ms cubic-bezier(0.1, 0.2, 0.3, 0.4);
+}
+
+/* animation */
+
+/* avatar */
+.send {
+    display: flex;
+    justify-content: center;
+}
+
+li #logo {
+    font-size: 100px;
+}
+
+c
+
+/* ---light/dảk mode---- */
+/* darkmode */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+  }
+  body.dark {
+    background-color: #292c35;
+  }
+  .checkbox {
+    opacity: 0;
+    position: absolute;
+  }
+  
+  .label {
+    width: 50px;
+    height: 26px;
+    background-color:#111;
+    display: flex;
+    border-radius:50px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    transform: scale(1.5);
+  }
+  
+  .ball {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    border-radius: 50%;
+    transition: transform 0.2s linear;
+  }
+  
+  /*  target the elemenent after the label*/
+  .checkbox:checked + .label .ball{
+    transform: translateX(24px);
+  }
+  
+  .fa-moon {
+    color: pink;
+  }
+  
+  .fa-sun {
+    color: yellow;
+  }
+  /* dark mode */

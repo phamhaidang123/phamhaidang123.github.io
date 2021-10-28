@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat</title>
+  <link rel="shortcut icon" href="https://ak.picdn.net/shutterstock/videos/1024926104/thumb/8.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="../css/chat.css" />
+  <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet" />
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body >
+
+  <!-- <div class="header">
+
+    <div class="info">
+      <div class="items">
+        <li>Helloo</li>
+        <li>Hello</li>
+<li>Hello</li>
+<li>Hello</li>
+
+
+      </div>
+    </div>
+
+</div> -->
+  <div class="container_">
+
+
+    <!-- <div class="section">
+      
+    </div> -->
+    <div class="left">
+      <div class="item">
+        <lottie-player data-toggle="modal" data-target="#myModal" src="https://assets1.lottiefiles.com/packages/lf20_bzhzelwb.json" background="transparent"
+          speed="1" style="width: 100px; height: 100px" loop autoplay ></lottie-player>
+      </div>
+      <div>
+        <div>
+          <input type="checkbox" class="checkbox" id="checkbox" />
+          <label for="checkbox" class="label">
+            <i class="fas fa-moon"></i>
+            <i class="fas fa-sun"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </div>
+      <div id="sg" class="item">
+        <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_9sX9SH.json"  background="transparent"  speed="1"  style="width: 100px; height: 100px;"  loop  autoplay></lottie-player>
+        
+
+
+
+      </div>
+    </div>
+    <div class="mid">
+      <div class="info">
+        <!-- ---sau khi có tên thì đổi thành h2--- -->
+        <h10>havent got a name yet</h10>
+      </div>
+      <div class="search">
+        <!-- <span> -->
+          <!-- <input id="name" placeholder="Search your friends" type="text">
+          <button id="search" >Search</button>
+          <style>
+            .button #search {
+  
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+
+}
+          </style>
+        </span> -->
+
+      </div>
+      <div class="userslist">
+      <div style="width: 100%; height: 400px; display: flex; justify-content: center; align-items: center;">  
+        <img src="../images/Spin-1s-200px.gif" alt="">
+      </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="info">
+        <div class="name">
+          <h3 id="currentName">Harry Potter</h3>
+          <p id="currentId">ID123123123</p>
+          <p id="currentEmail" >harrypotter@owlpost.com</p>
+          
+          
+        </div>
+        <span></span>
+        <h4 id="real_time">17:32:56 Monday</h4>
+      </div>
+      <div class="chat_body">
+        <div class="chat_content">
+          <!-- <label ><button  id="message" onclick="recallMessage()"  >Button</button></label> -->
+          <div class="message owner">
+            
+          </div>
+          <div class="message">
+            <img style="width: 100px; height: 100px; color: none;" src="https://cdn.dribbble.com/users/108183/screenshots/2301400/spinnervlll.gif" alt="">
+            <!-- <p id="test">ĐÂY LÀ MỤC TEST THỬ</p> -->
+          </div>
+          <div class="chat_info">
+
+          </div>
+
+
+            
+
+          
+        </div>
+
+
+        <form id="send_message">
+          <input name="m" id="input" type="text" placeholder="Enter yours message" />
+          <lottie-player id="send" type="submit" src="https://assets8.lottiefiles.com/datafiles/SsnntYI9d7Q2zbv/data.json"  background="transparent"  speed="1"  style="width: 30px; height: 30px;"  loop  autoplay></lottie-player>
+          <!-- <button type="submit" id="send"  > -->
+          <form >
+          </form>
+
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Thêm mới cuộc trò chuyện</h4>
+          <button type="button" class="close" data-dismiss="modal">
+            &times;
+          </button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <form id="addNewConversation">
+            <div class="form-group">
+              <label for="email">Tên Cuộc Trò Chuyện</label>
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Nhập tên cuộc trò chuyện"
+                name="name"
+              />
+            </div>
+            <div class="form-group">
+              <label for="pwd">Email của những người bạn</label>
+            class="form-control"
+                placeholder="Nhập email của người bạn"
+                name="email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="exampleFormControlFile1"
+                >Ảnh của cuộc trò chuyện</label
+              >
+              <input
+                type="file"
+                class="form-control-file"
+                id="exampleFormControlFile1"
+              />
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" id="formAddNewConversationBtn">
+            Thêm
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+   
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyADOqk6pCgs5EdvljQtng_D7oUaAMdZjYQ",
+    authDomain: "chatwebbydang.firebaseapp.com",
+    projectId: "chatwebbydang",
+    storageBucket: "chatwebbydang.appspot.com",
+    messagingSenderId: "507439995841",
+    appId: "1:507439995841:web:144fb75dc782e0beee6d40",
+    measurementId: "G-VL7JDZ4CXP"
+  };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        // Initialize Firebase
+        
+      </script>
+  <script src="../js/chat.js"></script>
+  <script>
+    const checkbox = document.getElementById("checkbox");
+
+    checkbox.addEventListener("change", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+
+
+</body>
+
+</html>

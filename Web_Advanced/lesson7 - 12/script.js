@@ -287,3 +287,9 @@ document.getElementById("bn").addEventListener("click", ()=>{
 })
 
 
+// ---------------------------------------------------------------------------------------
+$(document).ready(function(){
+  $("alert").submit(function(){
+    alert("Submitted");
+  });
+});

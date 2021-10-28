@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Sign in</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <!-- Font Icon -->
+  <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css" />
+
+  <!-- Main css -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="main">
+    <!-- Sing in  Form -->
+    <section id="si" class="sign-in">
+      <div class="container">
+        <div class="signin-content">
+          <div class="signin-image">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="https://assets9.lottiefiles.com/packages/lf20_e22mxpqm.json" background="transparent"
+              speed="1" style="width: 300px; height: 300px" loop autoplay></lottie-player>
+            <!-- <figure><img src="images/signup-image.jpg" alt="sing up image"></figure> -->
+
+            <a href="../html/signup.html" class="signup-image-link">Create an account</a>
+          </div>
+
+          <div class="signin-form">
+            <h2 class="form-title">Sign in</h2>
+            <form class="register-form" id="login">
+              <div class="form-group">
+                <label for="your_name"><i class="zmdi zmdi-account material-icons-name"></i></label>
+                <input type="text" name="your_name" id="your_name" placeholder="Your Name" />
+                <div class="error" id="siEmail"></div>
+              </div>
+
+              <div class="form-group">
+                <!-- id -->
+                <label for="your_pass"><i class="zmdi zmdi-lock"></i></label>
+                <input type="checkbox;" type="password" name="lnpassword" id="your_pass" placeholder="Password" />
+                <div class="error" id="siPassword"></div>
+              </div>
+              <div class="form-group">
+                <input type="checkbox" name="remember-me" id="remember-me" class="agree-term" />
+
+                <div class="formgroup">
+                  <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                  <label onclick="showHidePassword1()" for="agree-term"
+                    class="label-agree-term"><span><span></span></span>Show password <label></label>
+                </div>
+                >
+              </div>
+              <div class="form-group form-button">
+                <button style="border-radius: 20%; padding: 10px; background-color: lightblue;" type="submit">Sign in</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+<!-- sweet alert -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+
+        <script>
+  const firebaseConfig = {
+    apiKey: "AIzaSyADOqk6pCgs5EdvljQtng_D7oUaAMdZjYQ",
+    authDomain: "chatwebbydang.firebaseapp.com",
+    projectId: "chatwebbydang",
+    storageBucket: "chatwebbydang.appspot.com",
+    messagingSenderId: "507439995841",
+    appId: "1:507439995841:web:144fb75dc782e0beee6d40",
+    measurementId: "G-VL7JDZ4CXP"
+  };
+          firebase.initializeApp(firebaseConfig);
+          firebase.analytics();
+        </script>
+
+        <!-- JS -->
+        <script src="../js/signin.js"></script>
+</body>
+<!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+</html>

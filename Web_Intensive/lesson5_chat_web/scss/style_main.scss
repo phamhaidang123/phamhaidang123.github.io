@@ -1,0 +1,167 @@
+HTML SCSS JSResult Skip Results Iframe
+/* General Styles */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+// you can change the font size on html to change the size of the whole button.
+
+html {
+  font-size: 52.5%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  overflow: hidden;
+}
+
+/* outer-container styles */
+
+.outer-container {
+  background-color: rgb(0, 27, 58);
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    transition: .5s;
+}
+
+.outer-container.light {
+  background-color: rgb(247, 247, 247);
+
+}
+
+/* container "the whole button" styles */
+
+.container {
+  background: #484848;
+  width: 8rem;
+  height: 3rem;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0.3rem 0.5rem;
+  cursor: pointer;
+}
+
+.light .container {
+  background: #25aee9;
+}
+
+/* sun and moon styles */
+
+.circle {
+  position: relative;
+  height: 100%;
+  width: 35%;
+  background: #fffdf2;
+  border-radius: 50%;
+  transition: all 0.3s;
+
+  border: 0.5rem solid #dee1c5;
+
+  box-shadow: 2rem 0rem 0 -1rem #e9e0d1a8, 3rem 0.8rem 0 -1rem #e9e0d1a8,
+    3rem 0rem 0 -1.1rem #e9e0d1a8, 2.5rem -1rem 0 -1.1rem #e9e0d1a8,
+    4rem 0 0 -1rem #e9e0d1a8, 4.5rem 1rem 0 -1.1rem #e9e0d1a8,
+    5rem -0.8rem 0rem -1.1rem #e9e0d1a8, 5.5rem 0.5rem 0 -1rem #e9e0d1a8,
+    inset 8rem -2.5rem 0.7rem -3.5rem rgba(104, 58, 15, 0.144),
+    inset 0rem 0rem 0 -3rem rgba(104, 58, 15, 0.041);
+}
+
+.circle::before,
+.circle::after {
+  content: "";
+  position: absolute;
+  background: rgba(104, 58, 15, 0.144);
+  border-radius: 50%;
+}
+
+.circle::before {
+  top: 65%;
+  left: 60%;
+  height: 0.5rem;
+  width: 0.5rem;
+  border: 0.1rem solid rgba(104, 58, 15, 0.041);
+}
+
+.circle::after {
+  top: 10%;
+  left: -30%;
+  height: 1rem;
+  width: 1rem;
+  border: 0.3rem solid rgba(104, 58, 15, 0.041);
+}
+
+.light .circle {
+  background: #fbca00;
+  transform: translateX(190%);
+  box-shadow: none;
+  border: 0.2rem solid #e4c74d;
+}
+
+.light .circle::after,
+.light .circle::before {
+  display: none;
+}
+
+/* the clouds styles */
+
+.light .cloud {
+  position: absolute;
+  top: 31%;
+  left: -4.5rem;
+  display: block;
+  width: 8rem;
+  height: 2rem;
+  border: 0.4rem solid #d4d4d2;
+  border-radius: 3rem;
+  background-color: #fff;
+  animation: scaleItUp 0.5s;
+  z-index: -2;
+  transform: scale(0.35);
+  pointer-events: none;
+}
+
+.light .cloud::before,
+.light .cloud::after {
+  content: "";
+  display: block;
+  position: relative;
+  border: 0.4rem solid #d4d4d2;
+  border-radius: 100%;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  background-color: #fff;
+}
+
+.light .cloud::before {
+  top: -2.3rem;
+  right: 0rem;
+  width: 4rem;
+  height: 3.5rem;
+
+  transform: rotateZ(20deg);
+}
+
+.light .cloud::after {
+  top: -6.7rem;
+  right: -3rem;
+  width: 3rem;
+  height: 5rem;
+
+  transform: rotateZ(83deg);
+  z-index: -1;
+}
+
+/* animations */
+@keyframes scaleItUp {
+  from {
+    transform: scale(0);
+  }
+}

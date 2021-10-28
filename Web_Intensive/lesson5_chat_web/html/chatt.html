@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link rel="stylesheet" href="../css/chatt.css" />
+    <link
+      href="https://pro.fontawesome.com/releases/v5.12.0/css/all.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="nav_bar"></div>
+    <div class="container">
+      <div class="left">
+        <div class="item">
+          <lottie-player
+            src="https://assets1.lottiefiles.com/packages/lf20_bzhzelwb.json"
+            background="transparent"
+            speed="1"
+            style="width: 100px; height: 100px"
+            loop
+            autoplay
+          ></lottie-player>
+        </div>
+        <div>
+          <div>
+            <input type="checkbox" class="checkbox" id="checkbox" />
+            <label for="checkbox" class="label">
+              <i class="fas fa-moon"></i>
+              <i class="fas fa-sun"></i>
+              <div class="ball"></div>
+            </label>
+          </div>
+        </div>
+        <div onclick="signOut()" class="item">
+          <lottie-player
+            src="https://assets6.lottiefiles.com/packages/lf20_vmlm0zew.json"
+            background="transparent"
+            speed="1"
+            style="width: 100px; height: 100px"
+            loop
+            autoplay
+          ></lottie-player>
+        </div>
+      </div>
+      <div class="mid">
+        <div class="info"><h2>Messaeeee</h2></div>
+
+        <div class="usersList">
+          <div
+            style="width: 100%;height: 100%; display:flex; justify-content:center; align-items:center"
+          >
+            <img src="./img/Infinity-1s-200px.gif" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="info">
+          <div class="name">
+            <h3 id="currentName">
+              <img
+                style="width: 50px"
+                src="./img/Infinity-1s-200px.gif"
+                alt=""
+              />
+            </h3>
+            <p id="currentEmail">...</p>
+          </div>
+          <span id="currentId">...</span>
+          <h4 id="real_time">...</h4>
+        </div>
+        <div class="chat_body">
+          <div class="chat_content">...</div>
+          <form id="sent_message">
+            <input name="m" type="text" placeholder="Enter yours message" />
+            <button type="submit">
+              <lottie-player
+                src="https://assets8.lottiefiles.com/packages/lf20_7sg1ibsl.json"
+                background="transparent"
+                speed="1"
+                style="width: 40px; height: 40px"
+                loop
+                autoplay
+              ></lottie-player>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const checkbox = document.getElementById("checkbox");
+
+      checkbox.addEventListener("change", () => {
+        document.body.classList.toggle("dark");
+      });
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+    <script>
+      const firebaseConfig = {
+    apiKey: "AIzaSyADOqk6pCgs5EdvljQtng_D7oUaAMdZjYQ",
+    authDomain: "chatwebbydang.firebaseapp.com",
+    projectId: "chatwebbydang",
+    storageBucket: "chatwebbydang.appspot.com",
+    messagingSenderId: "507439995841",
+    appId: "1:507439995841:web:144fb75dc782e0beee6d40",
+    measurementId: "G-VL7JDZ4CXP"
+  };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        // Initialize Firebase
+        
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/chatt.js"></script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  </body>
+</html>
