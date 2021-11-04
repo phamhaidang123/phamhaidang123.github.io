@@ -276,7 +276,6 @@ let handleConversationChange = async (email) => {
         skipRun = false;
         return;
       }
-
       let docChanges = snapshot.docChanges();
       for (let docChange of docChanges) {
         let type = docChange.type;
@@ -312,15 +311,21 @@ btn_addnew.addEventListener("click", ()=>{
   let name = formNewConversation.name.value
   let email = formNewConversation.email.value
   addNewConversation(email, name)
+  if(name && email){
+    disableBtn("#formAddNewConversationBtn")
+    await addNewConversation(name, email)
+  }
   // console.log(name);
   // console.log(email);
 })
 
-let addNewConversation = async(email,name)=>{
-  let currentEmail = document.querySelector("#currentEmail").innerHTML
-  let userArray = [currentEmail, email]
 
-}
+
+
+
+
+
+
 
 
 

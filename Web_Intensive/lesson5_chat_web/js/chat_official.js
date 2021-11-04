@@ -1,8 +1,8 @@
-let clock = document.querySelector("#real_time");
+let clock = document.querySelector("#real_time"); //lấy tg
 
 let getRealTime = () => {
-  let date = new Date();
-  const days = [
+  let date = new Date(); //lấy tg ht
+  const days = [ //biến thứ
     "Sunday",
     "Monday",
     "Tuesday",
@@ -11,32 +11,32 @@ let getRealTime = () => {
     "Friday",
     "Saturday",
   ];
-  let h = date.getHours();
-  let m = date.getMinutes();
-  let s = date.getSeconds();
-  let d = days[date.getUTCDay()];
+  let h = date.getHours();               //lấy giờ
+  let m = date.getMinutes();             // lấy phút
+  let s = date.getSeconds();             // lấy giây
+  let d = days[date.getUTCDay()];        // lấy ngày
 
-  let h_ = "";
+  let h_ = ""; 
   let m_ = "";
   let s_ = "";
 
-  if (h < 10) {
-    h_ = "0" + h;
-  } else {
-    h_ = h;
+  if (h < 10) {      //nếu giờ < 10 (8 giờ)
+    h_ = "0" + h;      //cộng thêm số 0 phía trước
+  } else {             //nếu ko > 10 (15)
+    h_ = h;            //giữ
   }
-  if (m < 10) {
-    m_ = "0" + m;
-  } else {
-    m_ = m;
+  if (m < 10) {        //tương tự trên
+    m_ = "0" + m;       //tương tự trên
+  } else {                //tương tự trên
+    m_ = m;                   //tương tự trên
   }
-  if (s < 10) {
+  if (s < 10) {          //tương tự trên
     s_ = "0" + s;
-  } else {
+  } else {                    //tương tự trên
     s_ = s;
   }
 
-  let time = h_ + ":" + m_ + ":" + s_ + " " + d;
+  let time = h_ + ":" + m_ + ":" + s_ + " " + d;      /// time  = giờ + phút + giây + ng
 
   return time;
 };
@@ -138,21 +138,21 @@ let getDataFromDocs = (docs) => {
   }
   return result;
 };
-
+//chức năng sign out (firebase)
 let signOut = () => {
   firebase
     .auth()
     .signOut()
     .then(
       () => {
-        open("./signin.html", "_self");
+        open("./signin.html", "_self"); ///mở file signin
       },
       () => {
-        sweetAlert("error", "Something wrong");
+        sweetAlert("error", "Something wrong"); //lỗi
       }
     );
 };
-
+//sweetAlert
 let sweetAlert = (icon, content) => {
   const Toast = Swal.mixin({
     toast: true,
@@ -237,14 +237,22 @@ let formNewConversation = document.querySelector("#addNewConversation");
 let btn_addNew = document.querySelector("#formAddNewConversationBtn");
 btn_addNew.addEventListener("click", () => {
   let name = formNewConversation.name.value;
-  let email = formNewConversation.email.value;
+  let email = formNewConversation.email.value.toLowerCase();
 
+let arryEmail = email.split(" ");
+  if(name && email){
+    disableBtn("#formAddNewConversationBtn")
+    addNewConversation(name,arryEmail)
+  }
+
+
+});                          
+
+
+let addNewConversation = async (chatName, email) => {
   let currentEmail = document.querySelector("#currentEmail").innerHTML;
-  let arrEmail = [currentEmail, email]
-  addNewConversation(name,arrEmail)
-});
-
-let addNewConversation = async (chatName, friendEmail) => {
+  let arrEmail = email
+  arrEmail.push(currentEmail)
   const ref = await firebase.storage().ref();
   const file = document.querySelector("#photo").files[0];
 
@@ -262,15 +270,25 @@ let addNewConversation = async (chatName, friendEmail) => {
         createAt: getRealTime(),
         messages: [],
         name: chatName,
-        users: friendEmail,
+        users: arrEmail,
       };
       addConversation(data)
     })
     .catch((err) => {
       alert(err);
+      enableBtn("#formAddNewConversationBtn")
     });
 };
 
 let addConversation = async (data)=>{
   await firebase.firestore().collection("chat").add(data);
+  alert("Thêm Thành Công")
+  enableBtn("#formAddNewConversationBtn")
 }
+let disableBtn= async (query)=>{
+  document.querySelector(query).disabled = true;
+
+};
+let enableBtn= async (query)=>{
+  document.querySelector(query).disabled = false;
+};

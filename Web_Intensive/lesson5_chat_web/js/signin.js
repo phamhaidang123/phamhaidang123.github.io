@@ -17,13 +17,14 @@ login.onsubmit = (e) => {
     } else if (lnpassword.length < 6) {
         setText("#siPassword", "Password must be at least 6 characters!");
     } else {
+        //đăng nhập = firebase (copy firebase)
         firebase.auth().signInWithEmailAndPassword(your_name, lnpassword)
         .then((userCredential) => {
           // Signed in
           var user = userCredential.user;
           if(user.emailVerified){
               console.log("Hello");
-              open("../html/chatt.html", "_self")
+              open("../html/chat_official.html", "_self")
           }else{
               
               sweetAlert("error", "Pls verify your e-mail")
@@ -52,7 +53,8 @@ let showHidePassword1 = () => {
 let setText = (query, content) => {
     document.querySelector(query).innerHTML = content;
 }
-
+///////////////////////////////////////////////////////////////////////
+//*Copy sweet alert
 let sweetAlert = (icon, content) => {
     Swal.fire({
       title: 'Successfully! Now check your e-mail and sign in!',
